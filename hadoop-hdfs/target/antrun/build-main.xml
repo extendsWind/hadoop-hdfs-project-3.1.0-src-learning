@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <delete dir="/home/sparkl/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data"/>
+  <mkdir dir="/home/sparkl/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data"/>
+  <mkdir dir="/home/sparkl/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/log"/>
+  <copy todir="/home/sparkl/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test-classes/webapps">
+    <fileset dir="/home/sparkl/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/webapps">
+      <exclude name="proto-*-web.xml"/>
+      <exclude name="**/proto-web.xml"/>
+    </fileset>
+  </copy>
+</target>
+</project>
